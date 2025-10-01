@@ -70,7 +70,7 @@ sequelize.authenticate()
     return sequelize.sync({ alter: true });
   })
   .then(() => {
-    server.listen(process.env.PORT || 3000, () =>
+    server.listen(process.env.PORT || 5000, () =>
       console.log(`🚀 Server running on port ${process.env.PORT || 3000}`)
     );
   })
