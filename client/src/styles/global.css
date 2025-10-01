@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg, #3f0d7e, #0fffc1, #ff00ff);
+  background-size: 600% 600%;
+  animation: pulseBackground 20s ease infinite;
+  color: #00ffff;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Animated gradient pulse */
+@keyframes pulseBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Neon headers */
+h1, h2, h3 {
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff;
+  animation: neonPulse 3s infinite;
+}
+
+@keyframes neonPulse {
+  0% { text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff; }
+  50% { text-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff; }
+  100% { text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff; }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ff00ff;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #3f0d7e;
+}
+
+

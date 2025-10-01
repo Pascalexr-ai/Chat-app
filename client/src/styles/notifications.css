@@ -1,0 +1,30 @@
+
+.notifications-container {
+  padding: 2rem;
+  font-family: 'Orbitron', sans-serif;
+  color: #00ffff;
+}
+
+.notification-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.notification-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #ff00ff;
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ff00ff;
+  transition: 0.3s;
+}
+
+.notification-item:hover {
+  background: #1a1a1a;
+  color: #ff00ff;
+}

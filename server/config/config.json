@@ -1,0 +1,10 @@
+
+{
+  "development": {
+    "username": "Pascale",
+    "password": "You123nelton",
+    "database": "social_chat_app",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}

@@ -1,0 +1,15 @@
+
+.theme-toggle {
+  background: transparent;
+  border: 1px solid #ff00ff;
+  color: #00ffff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
+  transition: 0.3s;
+}
+
+.theme-toggle:hover {
+  background-color: #1a1a1a;
+  color: #ff00ff;
+}
