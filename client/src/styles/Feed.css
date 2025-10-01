@@ -2,6 +2,9 @@
   padding: 2rem;
   color: #00ffff;
   font-family: 'Orbitron', sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .post-form {
@@ -10,80 +13,8 @@
   padding: 1rem;
   border-radius: 10px;
   margin-bottom: 2rem;
-}
-
-.post-form textarea {
   width: 100%;
-  height: 80px;
-  background: #1a1a1a;
-  color: #00ffff;
-  border: none;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  resize: none;
-}
-
-.post-form button {
-  background: #ff00ff;
-  color: #0f0f0f;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.post-form button:hover {
-  background: #00ffff;
-  color: #0f0f0f;
-}
-
-.post-card {
-  background: rgba(0, 0, 0, 0.6);
-  border: 1px solid #ff00ff;
-  border-radius: 10px;
-  padding: 1rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 0 10px #ff00ff;
-}
-
-.post-header {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
-  color: #ff9900;
-  justify-content: space-between;
-}
-
-.timestamp {
-  font-size: 0.8rem;
-  color: #888;
-}
-
-
-
-.post-actions {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.icon {
-  color: #ff00ff;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.icon:hover {
-  color: #00ffff;
-}
-.post-form {
-  background: rgba(0, 0, 0, 0.6);
-  border: 1px solid #00ffff;
-  padding: 1rem;
-  border-radius: 10px;
-  margin-bottom: 2rem;
+  box-sizing: border-box;
 }
 
 .post-form textarea {
@@ -98,6 +29,22 @@
   font-family: 'Orbitron', sans-serif;
 }
 
+.post-form button {
+  background: #ff00ff;
+  color: #0f0f0f;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.post-form button:hover {
+  background: #00ffff;
+  color: #0f0f0f;
+}
+
 .file-label {
   display: inline-block;
   color: #ff00ff;
@@ -109,27 +56,54 @@
   display: none;
 }
 
-.post-form button {
-  background: #ff00ff;
-  color: #0f0f0f;
-  border: none;
-  padding: 0.5rem 1rem;
+.post-card {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #ff00ff;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 10px #ff00ff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #ff9900;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.timestamp {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.post-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.icon {
+  color: #ff00ff;
   cursor: pointer;
-  font-weight: bold;
   transition: 0.3s;
 }
 
-.post-form button:hover {
-  background: #00ffff;
-  color: #0f0f0f;
+.icon:hover {
+  color: #00ffff;
 }
-
-
 
 .search-bar {
   display: flex;
   gap: 0.5rem;
   margin-bottom: 1rem;
+  flex-wrap: wrap;
 }
 
 .search-bar input {
@@ -138,6 +112,7 @@
   color: #00ffff;
   border: none;
   padding: 0.5rem;
+  min-width: 200px;
 }
 
 .search-bar button {
@@ -146,6 +121,7 @@
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .search-results {
@@ -160,11 +136,12 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
-
 .post-media-card {
-  width: 200px;
+  width: 100%;
+  max-width: 200px;
   height: 120px;
   overflow: hidden;
   border-radius: 8px;
@@ -207,8 +184,8 @@
 
 .modal-content {
   position: relative;
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 90%;
+  max-height: 90%;
 }
 
 .modal-content img,
@@ -229,3 +206,60 @@
   font-size: 1.5rem;
   cursor: pointer;
 }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .feed-container {
+    padding: 1rem;
+  }
+
+  .post-form {
+    padding: 0.75rem;
+  }
+
+  .post-form textarea {
+    height: 100px;
+    font-size: 1rem;
+  }
+
+  .post-form button {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  .search-bar {
+    flex-direction: column;
+  }
+
+  .search-bar input,
+  .search-bar button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .post-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .post-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .search-user {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .post-media-card {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .modal-content {
+    max-width: 95%;
+    max-height: 95%;
+  }
+}
+

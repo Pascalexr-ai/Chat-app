@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import {
@@ -10,9 +9,9 @@ import {
 } from 'react-icons/fa';
 import '../styles/sidebar.css';
 
-function Sidebar() {
+function Sidebar({ sidebarOpen }) {
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${sidebarOpen ? 'active' : ''}`}>
       <NavLink to="/feed" className="nav-item">
         <FaHome /> <span>Feed</span>
       </NavLink>
@@ -33,3 +32,4 @@ function Sidebar() {
 }
 
 export default Sidebar;
+
